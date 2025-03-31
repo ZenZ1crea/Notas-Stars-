@@ -1,68 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notas star 🌟</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="code.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Notas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Barra Superior -->
-  <header class="top-bar">
-    <button class="add-btn"> + </button>
-    <input type="text" placeholder="Buscar palabra..." class="search-box">
-    <button class="config-btn">&#9881;</button>
-  </header>
-
-  <!-- Panel principal -->
-  <main class="main-panel">
-
-    <!-- Nota -->
-    <section class="note">
-      <div class="note-toolbar">
-        <!-- Editor de letra -->
-        <button>B</button>
-        <button><i>C</i></button>
-        <button><u>U</u></button>
-
-        <!-- Fuente -->
-        <select>
-          <option>Arial</option>
-          <option>Verdana</option>
-        </select>
-
-        <!-- Tamaño de letra -->
-        <select>
-          <option>12px</option>
-          <option>14px</option>
-          <option>16px</option>
-          <option>18px</option>
-        </select>
-
-        <!-- Botones de control -->
-        <div class="note-controls">
-          <button class="save-btn">&#128190;</button>
-          <button class="minimize-btn">&#9472;</button>
-          <button class="close-btn">&#10006;</button>
-        </div>
-      </div>
-      <textarea class="note-content" placeholder="Escribe tu nota..."></textarea>
-    </section>
-
-    <!-- Panel de notas guardadas -->
-    <section class="saved-notes">
-      <h3>Notas Guardadas</h3>
-      <div class="saved-note"><button>Nota 1</button></div>
-      
-    </section>
-
-    <!-- Panel de notas minimizadas -->
-    <section class="minimized-notes">
-      <h3>Notas Minimizadas</h3>
-      <div class="minimized-note">Nota</div>
-    </section>
-  </main>
-  
+  <header>
+    <button id="addNote">➕ Agregar Nota</button>
+    <input type="text" id="search" placeholder="Buscar en las notas...">
+    <button id="settings">⚙️ Ajustes</button>
+</header>
+    
+    <main id="notesContainer"></main>
+    
+    <div id="minimizedNotes"></div>
+    
+    <script src="code.js"></script>
 </body>
 </html>
